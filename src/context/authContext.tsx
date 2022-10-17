@@ -17,19 +17,14 @@ export const AuthContextProvider = ({children}: Children) => {
                     method: 'POST',
                     credentials: 'include',
                     headers: { 'Content-Type': 'application/json', },
-                    body: JSON.stringify({
-                        name,
-                        password
-                    })
+                    body: JSON.stringify({ name, password })
                 });
                 const res = await user.json();
                 if (res.error) throw res.error;
                 //console.log(res);
                 window.localStorage.setItem('AUTH', '1');
                 setAuth(true);
-            } catch (error) {
-                //console.log(error);
-            }
+            } catch (error) { console.log(error); }
         }
         auth();
     }, []);
@@ -48,22 +43,14 @@ export const AuthContextProvider = ({children}: Children) => {
                 //console.log(res);
                 window.localStorage.removeItem('AUTH');
                 setAuth(false);
-            } catch (error) {
-                //console.log(error);
-            }
+            } catch (error) { console.log(error); }
         }
         out();
     }, []);
 
-    const value = useMemo(() => ({
-        login,
-        logout,
-        isAuth
-    }), [login, logout, isAuth]);
+    const value = useMemo(() => ({ login, logout, isAuth }), [login, logout, isAuth]);
 
     return <AuthContext.Provider value={value}>{ children }</AuthContext.Provider>
 }
 
-export const useAuthContext = () => {
-    return useContext(AuthContext);
-}
+export const useAuthContext = () => useContext(AuthContext); 
