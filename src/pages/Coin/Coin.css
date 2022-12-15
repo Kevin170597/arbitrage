@@ -40,6 +40,9 @@
     font-size: 12px;
     padding: 0 20px;
     border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .Coin .coinContainer {
@@ -69,49 +72,5 @@
     width: 30%;
     font-size: 12px;
     padding: 0 20px;
-    border-radius: 20px;
-}
-
-.Coin .sell {
-    height: calc(75% - 100px);
-    overflow-y: auto;
-}
-
-.Coin .sell .exchange {
-    display: flex;
-    align-items: center;
-    margin: 10px 0;
-}
-
-.Coin .sell .exchange img {
-    width: 45px;
-    height: 45px;
-    border-radius: 50%;
-}
-
-.Coin .sell .exchange p {
-    font-size: 12px;
-    margin: 0;
-}
-
-.Coin .sell .exchange p.name {
-    margin-left: 15px;
-    color: #fff;
-}
-
-.Coin .sell .exchange p.price {
-    margin: 0 0 0 auto;
-    color: #838383;
-}
-
-.Coin .sell .exchange p.fee {
-    color: #C74D19;
-    margin: 0 10px;
-}
-
-.Coin .sell .exchange p.finalPrice {
-    background-color: #3D635A;
-    color: #DBDBDB;
-    padding: 5px 8px;
     border-radius: 20px;
 }

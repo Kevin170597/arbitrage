@@ -1,5 +1,5 @@
 export const ArrowLeft = (props:any) => (
-    <svg
+    <svg style={{margin: props.margin}}
         width={40}
         height={40}
         fill="#000"

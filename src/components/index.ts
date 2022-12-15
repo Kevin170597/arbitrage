@@ -16,4 +16,6 @@ export { ClockIcon } from './Icons/ClockIcon';
 export { PlusIcon } from './Icons/PlusIcon';
 export { DragIcon } from './Icons/DragIcon';
 
+export { ArrowBottom } from './Icons/ArrowBottom';
+
 export { Button } from './Button/Button';

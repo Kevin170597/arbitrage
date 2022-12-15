@@ -2,11 +2,14 @@ import { useState, useEffect, useRef } from 'react';
 import './Coin.css';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
 
+import { ArrowBottom, ArrowLeft } from '../../components';
+import { Sell, Buy, Arbitrage } from '../../widgets';
+
 export const Coin = () => {
     const [action, setAction] = useState<string>('sell');
 
     const [coinName, setCoinName] = useState<string>('usdt');
-    const [coinValue, setCoinValue] = useState<any>('');
+    const [coinData, setCoinData] = useState<any>('');
 
     const [coinSelector, setCoinSelector] = useState<boolean>(false);
 
@@ -24,7 +27,7 @@ export const Coin = () => {
         });
         //console.log(result);
         setCoinSelector(false);
-        setCoinValue(result);
+        setCoinData(result);
     }
 
     useEffect(() => {
@@ -34,7 +37,10 @@ export const Coin = () => {
     return (
         <div className='Coin' data-theme={coinName}>
             <div className='coinSelector'>
-                <button className='coinsDropdown' onClick={() => setCoinSelector(!coinSelector)}>{coinName.toUpperCase()}</button>
+                <button className='coinsDropdown' onClick={() => setCoinSelector(!coinSelector)}>
+                    {coinName.toUpperCase()}
+                    <ArrowBottom fill='#fff' width='20' height='20' margin='0 0 0 20px' />
+                </button>
                 {coinSelector &&
                     <div ref={coinSelectorRef} className='coins'>
                         {coinName != 'usdt' && <button onClick={() => getCoin('usdt')}>USDT</button>}
@@ -64,19 +70,13 @@ export const Coin = () => {
                 </button>
             </div>
             {action === 'sell' &&
-                <div className='sell'>
-                    {coinValue &&
-                        coinValue.map((e: any, i: number) =>
-                            <div className='exchange' key={i}>
-                                <img src={require(`../../assets/exchanges/${e.name}.png`)} alt="" />
-                                <p className='name'>{e.name}</p>
-                                <p className='price'>${e.bid}</p>
-                                <p className='fee'>-1%</p>
-                                <p className='finalPrice'>ARS ${e.totalBid}</p>
-                            </div>
-                        )
-                    }
-                </div>
+                <Sell coinData={coinData} />
+            }
+            {action === 'buy' &&
+                <Buy coinData={coinData} />
+            }
+            {action === 'arbitrage' &&
+                <Arbitrage />
             }
         </div>
     )

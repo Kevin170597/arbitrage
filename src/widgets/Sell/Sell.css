@@ -1,0 +1,49 @@
+.sell {
+    height: calc(75% - 100px);
+    overflow-y: auto;
+}
+
+.sell .exchange {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.sell .exchange img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.sell .exchange p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.sell .exchange p.name {
+    width: 25%;
+    color: #fff;
+    padding-left: 14px;
+}
+
+.sell .exchange p.price {
+    width: 20%;
+    text-align: center;
+    color: #838383;
+    margin-left: auto;
+}
+
+.sell .exchange p.fee {
+    width: 10%;
+    text-align: center;
+    color: #C74D19;
+}
+
+.sell .exchange p.finalPrice {
+    width: 20%;
+    text-align: center;
+    background-color: #3D635A;
+    color: #DBDBDB;
+    padding: 5px 8px;
+    border-radius: 20px;
+}
