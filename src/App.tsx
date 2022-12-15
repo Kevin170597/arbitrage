@@ -14,7 +14,7 @@ export const App = () => {
             <Route path='/upload' element={<UploadImage />} />
           </Route>
           <Route path='/' element={<Private />}>
-            <Route path='/dashboard' element={<Dashboard />} />
+            <Route path='/dashboard/*' element={<Dashboard />} />
           </Route>
         </Routes>
       </BrowserRouter>

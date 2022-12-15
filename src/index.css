@@ -11,3 +11,74 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:root {
+  --background: #232d27;
+  --background2: #21221b;
+}
+
+[data-theme='usdt'] {
+  --background: #232d27;
+  --background2: #21221b;
+  --selectorBackground: #273A37;
+  --selectorBorder: #235946;
+  --button: #252F2C;
+  --buttonBorder: #2F5C52;
+  --active: #3D635A;
+  --activeShadow: #2c79677b;
+}
+
+[data-theme='btc'] {
+  --background: #3C3026;
+  --background2: #25241E;
+  --selectorBackground: #493C2E;
+  --selectorBorder: #665833;
+  --button: #3A3225;
+  --buttonBorder: #665833;
+  --active: #705C2B;
+  --activeShadow: #705C2B;
+}
+
+[data-theme='eth'] {
+  --background: #2F2D47;
+  --background2: #25241E;
+  --selectorBackground: #3C395E;
+  --selectorBorder: #594D7B;
+  --button: #372E42;
+  --buttonBorder: #594D7B;
+  --active: #4E4075;
+  --activeShadow: #4E4075;
+}
+
+[data-theme='busd'] {
+  --background: #3C3B26;
+  --background2: #25241E;
+  --selectorBackground: #46452C;
+  --selectorBorder: #7B6E4D;
+  --button: #423A2E;
+  --buttonBorder: #7B6E4D;
+  --active: #756640;
+  --activeShadow: #705C2B;
+}
+
+[data-theme='dai'] {
+  --background: #494831;
+  --background2: #25241E;
+  --selectorBackground: #555437;
+  --selectorBorder: #757B4D;
+  --button: #40422E;
+  --buttonBorder: #757B4D;
+  --active: #747540;
+  --activeShadow: #747540;
+}
+
+[data-theme='bnb'] {
+  --background: #494831;
+  --background2: #25241E;
+  --selectorBackground: #555437;
+  --selectorBorder: #757B4D;
+  --button: #40422E;
+  --buttonBorder: #757B4D;
+  --active: #747540;
+  --activeShadow: #747540;
+}

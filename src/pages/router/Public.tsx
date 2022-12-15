@@ -5,7 +5,7 @@ import { AuthContextInterface } from '../../models';
 export const Public = () => {
     const { isAuth } = useAuthContext() as AuthContextInterface;
 
-    if (isAuth) return <Navigate to='/dashboard'/>
+    if (!isAuth) return <Navigate to='/dashboard'/>
 
     return <div><Outlet /></div>;
 };

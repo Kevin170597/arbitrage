@@ -1,5 +1,8 @@
+import { Routes, Route } from 'react-router-dom';
 import { useAuthContext } from '../../context/authContext';
 import { AuthContextInterface } from '../../models';
+import { Coin } from '../';
+import './Dashboard.css';
 
 export const Dashboard = () => {
     const { logout } = useAuthContext() as AuthContextInterface;
@@ -10,8 +13,9 @@ export const Dashboard = () => {
 
     return (
         <div className='Dashboard'>
-            Dashboard
-            <button onClick={handleLogout}>logout</button>
+            <Routes>
+                <Route path='/' element={<Coin />} />
+            </Routes>
         </div>
     )
 };
