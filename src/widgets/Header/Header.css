@@ -1,0 +1,30 @@
+.header {
+    color: #979797;
+    display: flex;
+    align-items: center;
+    height: 5%;
+}
+
+.header p {
+    margin: 0;
+}
+
+.header p.name {
+    width: 40%;
+    padding-left: 10px;
+}
+
+.header p.price {
+    width: 20%;
+    text-align: center;
+}
+
+.header p.fee {
+    width: 15%;
+    text-align: center;
+}
+
+.header p.final {
+    width: 25%;
+    text-align: center;
+}

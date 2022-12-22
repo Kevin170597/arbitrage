@@ -1,5 +1,5 @@
 .sell {
-    height: calc(75% - 100px);
+    height: calc(70% - 100px);
     overflow-y: auto;
 }
 

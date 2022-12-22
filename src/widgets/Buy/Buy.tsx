@@ -11,8 +11,8 @@ export const Buy = (props: any) => {
                         <img src={require(`../../assets/exchanges/${e.name}.png`)} alt="" />
                         <p className='name'>{e.name}</p>
                         <p className='price'>${e.ask}</p>
-                        <p className='fee'>-1%</p>
-                        <p className='finalPrice'>${e.totalAsk}</p>
+                        <p className='fee'>+{((e.bid - e.totalBid) / e.bid * 100).toFixed(1)}%</p>
+                        <p className='finalPrice'>${e.totalAsk.toLocaleString('es')}</p>
                     </div>
                 )
             }

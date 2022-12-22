@@ -1,15 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
 import './Coin.css';
 import { useOnClickOutside } from '../../hooks/useOnClickOutside';
+import { CoinInterface } from '../../models/coin.model';
 
-import { ArrowBottom, ArrowLeft } from '../../components';
-import { Sell, Buy, Arbitrage } from '../../widgets';
+import { ArrowBottom } from '../../components';
+import { Sell, Buy, Arbitrage, Header } from '../../widgets';
 
 export const Coin = () => {
     const [action, setAction] = useState<string>('sell');
 
     const [coinName, setCoinName] = useState<string>('usdt');
-    const [coinData, setCoinData] = useState<any>('');
+    const [coinData, setCoinData] = useState<CoinInterface[]>();
 
     const [coinSelector, setCoinSelector] = useState<boolean>(false);
 
@@ -25,7 +26,7 @@ export const Coin = () => {
             res[key].name = key;
             result.push(res[key])
         });
-        //console.log(result);
+        console.log(result);
         setCoinSelector(false);
         setCoinData(result);
     }
@@ -69,11 +70,14 @@ export const Coin = () => {
                     Arbitrar
                 </button>
             </div>
+            {(action === 'sell' || action === 'buy') &&
+                <Header />
+            }
             {action === 'sell' &&
-                <Sell coinData={coinData} />
+                <Sell coinData={coinData?.sort((a, b) => b.totalBid - a.totalBid)} />
             }
             {action === 'buy' &&
-                <Buy coinData={coinData} />
+                <Buy coinData={coinData?.sort((a, b) => a.totalAsk - b.totalAsk)} />
             }
             {action === 'arbitrage' &&
                 <Arbitrage />

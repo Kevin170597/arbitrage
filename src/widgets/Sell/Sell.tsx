@@ -12,7 +12,7 @@ export const Sell = (props: any) => {
                         <p className='name'>{e.name}</p>
                         <p className='price'>${e.bid}</p>
                         <p className='fee'>-{((e.bid - e.totalBid) / e.bid * 100).toFixed(1)}%</p>
-                        <p className='finalPrice'>${e.totalBid}</p>
+                        <p className='finalPrice'>${e.totalBid.toLocaleString('es')}</p>
                     </div>
                 )
             }
