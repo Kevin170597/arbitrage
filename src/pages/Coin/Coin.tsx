@@ -26,7 +26,7 @@ export const Coin = () => {
             res[key].name = key;
             result.push(res[key])
         });
-        console.log(result);
+        //console.log(result);
         setCoinSelector(false);
         setCoinData(result);
     }
@@ -80,7 +80,7 @@ export const Coin = () => {
                 <Buy coinData={coinData?.sort((a, b) => a.totalAsk - b.totalAsk)} />
             }
             {action === 'arbitrage' &&
-                <Arbitrage />
+                <Arbitrage buy={coinData?.sort((a, b) => a.totalAsk - b.totalAsk)} />
             }
         </div>
     )

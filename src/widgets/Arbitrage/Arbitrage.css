@@ -1,0 +1,141 @@
+.Arbitrage {
+    margin: 10px 0;
+}
+
+.Arbitrage .oportunity {
+    background-color: #212F2C;
+    border-radius: 10px;
+    padding: 18px 0;
+}
+
+.Arbitrage .oportunity .info {
+    display: flex;
+}
+
+.Arbitrage .oportunity .info div {
+    width: 20%;
+}
+
+.Arbitrage .oportunity .info .exchange {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Arbitrage .oportunity .info .exchange img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.Arbitrage .oportunity .info .exchange p {
+    margin: 6px 0 0 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+.Arbitrage .oportunity .info .buyAndSell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Arbitrage .oportunity .info .buyAndSell p {
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+.Arbitrage .oportunity .info .buyAndSell small {
+    color: #7A7A7A;
+    font-size: 11px;
+    text-align: center;
+}
+
+.Arbitrage .oportunity .info .buyAndSell b {
+    color: #fff;
+    font-size: 18px;
+}
+
+.Arbitrage .oportunity .info .red {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.Arbitrage .oportunity .info .red img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 3px 0;
+}
+
+.Arbitrage .oportunity .info .red p {
+    margin: 0;
+    color: #fff;
+    font-size: 12px;
+}
+
+.Arbitrage .oportunity .calculator {
+    display: flex;
+    margin-top: 25px;
+}
+
+.Arbitrage .oportunity .calculator .initial {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0 0 0 20px;
+}
+
+.Arbitrage .oportunity .calculator .initial label {
+    font-size: 16px;
+    color: #808080;
+}
+
+.Arbitrage .oportunity .calculator .initial input {
+    width: 60%;
+    background: none;
+    border: none;
+    border-bottom: solid 1px #808080;
+    color: #fff;
+    margin-left: 5px;
+    font-size: 16px;
+}
+
+.Arbitrage .oportunity .calculator .initial input:focus {
+    outline: none;
+}
+
+.Arbitrage .oportunity .calculator .reward {
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Arbitrage .oportunity .calculator .reward p {
+    margin: 0;
+    color: #7D7D7D;
+}
+
+.Arbitrage .oportunity .calculator .reward b {
+    font-size: 18px;
+    color: #28A02D;
+}
+
+.Arbitrage .oportunity .calculator .result {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Arbitrage .oportunity .calculator .result p {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+}
